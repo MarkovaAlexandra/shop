@@ -142,6 +142,7 @@
 .parametres {
     @include flex_center_spbetween;
     gap: 42px;
+    margin-top: 65px;
     margin-bottom: 48px;
 
     &__color,
