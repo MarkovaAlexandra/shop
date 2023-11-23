@@ -1,6 +1,7 @@
 @import "vars";
 @import "mixins";
 @import "product";
+@import "catalog";
 
 * {
     margin: 0;
@@ -13,6 +14,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 img {
@@ -28,12 +30,18 @@ img {
     background-color: #222222;
     padding-top: 18px;
     padding-bottom: 19px;
-
+    overflow-x: hidden
 }
 
 
 .header-flex {
     @include flex_center_spbetween;
+    overflow: hidden;
+}
+
+.header-left {
+    @include flex_center_spbetween;
+    gap: 33px;
 }
 
 .header-right {
@@ -43,66 +51,75 @@ img {
     gap: 41px;
 }
 
-.root_menu {
 
-    position: relative;
-    display: inline-block;
-}
 
-.root_menu:hover .dropdown {
-    display: block;
-}
-
-.dropdown {
+//1.скрываем галочку  чекбокса(просто уводим за экран)
+#burger {
     position: absolute;
-    display: none;
-    background: $white;
-    list-style-type: none;
-    padding: 32px;
-    z-index: 1000;
+    left: -999999999px;
+    visibility: hidden;
 }
 
-.dropdown>li {
-    cursor: pointer;
+//2. размещаем наше меню за экраном
+.nav {
+    position: absolute;
+    top: 75px;
+    right: -300px;
+    transition: right 0.5s; //скорость выезда справа
+    z-index: 10;
 }
 
-.menu_heading {
-    color: #000;
-    font-family: Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 24px;
+/*
+3.вытаскиваем наше меню:
+когда бурег в состоянии cheked,
+поищи на том же уровне вложенности класс .nav
+и прижми меню к правому краю экрана
+*/
+
+#burger:checked~.nav {
+    right: 0px;
 }
 
-.menu_subheading {
-    color: $pink;
-    font-family: Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 12px;
-}
-
-.menu_item {
-    display: block;
-    color: #6F6E6E;
-    font-family: Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 11px;
-    padding-left: 10px;
-}
-
-.header-left {
+//burger-menu
+.burger-menu {
+    width: 232px;
+    background-color: #FFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 37px 0 32px 34px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 33px;
+    flex-direction: column;
+    gap: 12px;
+
+    &__heading {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 24px;
+    }
+
+    &__subheading {
+        color: $pink;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__link {
+
+        padding-left: 20px;
+        color: $light_grey_text;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &:hover {
+            color: $pink;
+        }
+    }
 }
 
 .main {
@@ -325,7 +342,7 @@ img {
 }
 
 .pink_button {
-    color: #F26376;
+    color: $pink;
     font-family: Lato;
     font-size: 16px;
     font-style: normal;
@@ -333,7 +350,7 @@ img {
     text-align: center;
     line-height: normal;
     padding: 1rem 2rem;
-    border: 1px solid #F26376;
+    border: 1px solid $pink;
     text-decoration: none;
     margin-bottom: 95px;
     transition: all 0.3s;
@@ -341,7 +358,7 @@ img {
 
 .pink_button:hover {
     color: $white;
-    background-color: #F26376;
+    background-color: $pink;
 }
 
 .conditions {

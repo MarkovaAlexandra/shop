@@ -1,0 +1,205 @@
+//стили для общего дива с фильтром и сортировками
+.filter-sort {
+    height: 132px;
+    display: flex;
+    gap: 30px;
+    position: relative;
+
+}
+
+//стили для details (filtr)
+.filter {
+    margin-top: 39px;
+    padding: 13px 16px 16px;
+    width: 360px;
+    position: relative;
+    z-index: 10;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+
+
+
+    &[open] {
+        background-color: #FFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+    }
+
+    &[open] .filter__summary {
+        color: $pink;
+    }
+
+    &[open] path {
+        fill: $pink;
+    }
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &__parameters[open] .filter__heading {
+        color: $pink;
+    }
+
+    &__heading {
+        color: #6F6E6E;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 8px 12px 12px 12px;
+        border-left: 5px solid $pink;
+        border-bottom: 1px solid #EBEBEB;
+        margin-top: 18px;
+    }
+
+    &__link__box {
+        padding-top: 16px;
+        padding-left: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    &__link {
+        color: #6F6E6E;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+
+        &:hover {
+            color: $pink;
+        }
+    }
+}
+
+.sort {
+    display: flex;
+    gap: 28px;
+    padding-top: 51px;
+
+    &__details {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__summary {
+        color: $light_grey_text;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &__for__trending {
+        @include sort_position;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        color: $light_grey_text;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+    &__checkbox {
+        @include sort_position;
+        width: 79px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        color: $light_grey_text;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+    }
+
+    &__price {
+        @include sort_position;
+        width: 140px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        color: $light_grey_text;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.catalog-swiper {
+    position: relative;
+    height: 100%;
+}
+
+.catalog-swiper {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 96px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+}
