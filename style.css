@@ -379,6 +379,13 @@
   padding: 16px 40px;
   border: 1px solid #A4A4A4;
   background-color: transparent;
+  transition: all 0.5s;
+}
+.cart__btn:hover {
+  background-color: #F16D7F;
+  color: #FFF;
+  border: 1px solid #FFF;
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
 }
 
 .cart-item {
@@ -510,6 +517,13 @@
   color: #4A4A4A;
 }
 
+.btn-get-quote:hover {
+  background-color: #F16D7F;
+  color: #FFF;
+  border: 1px solid #FFF;
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
+
 .total {
   background-color: #F5F3F3;
   padding: 40px;
@@ -532,12 +546,20 @@
   margin-top: 17px;
   display: block;
   padding: 16px 42px;
-  background-color: #F16D7F;
-  color: #FFF;
+  background-color: transparent;
+  color: #222;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  border: 1px solid #E2E2E2;
+  transition: all 0.3s;
+}
+.total__link:hover {
+  background-color: #F16D7F;
+  color: #FFF;
+  border: 1px solid #FFF;
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
 }
 
 .preview-text {
@@ -1109,6 +1131,7 @@ img {
 .social_network_link {
   background-color: white;
   padding: 0.5rem;
+  transition: all 0.3s;
 }
 
 .social_network_link:hover {

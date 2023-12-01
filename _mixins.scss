@@ -17,3 +17,10 @@
     top: 30px;
     padding: 9px 30px 12px 9px;
 }
+
+@mixin hover_pink {
+    background-color: $pink;
+    color: #FFF;
+    border: 1px solid #FFF;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
