@@ -29,11 +29,15 @@
 
     &__link {
         color: $light_grey_text;
-
         font-size: 14px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
+    }
+
+    &__link:not(:last-child)::after {
+        content: "/";
+        padding: 0 8px;
     }
 
     &__link:last-child {

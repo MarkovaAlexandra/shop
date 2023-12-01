@@ -33,6 +33,10 @@
   font-weight: 300;
   line-height: normal;
 }
+.breadcrumbs__link:not(:last-child)::after {
+  content: "/";
+  padding: 0 8px;
+}
 .breadcrumbs__link:last-child {
   color: #F16D7F;
   font-size: 14px;
@@ -171,6 +175,7 @@
 }
 
 .filter {
+  cursor: pointer;
   margin-top: 39px;
   padding: 13px 16px 16px;
   width: 360px;
@@ -243,6 +248,7 @@
 .sort__details {
   position: relative;
   z-index: 10;
+  cursor: pointer;
 }
 .sort__summary {
   color: #636363;
@@ -352,6 +358,219 @@
 .swiper-pagination-bullet-active {
   color: #fff;
   background: #007aff;
+}
+
+.cart {
+  padding-top: 96px;
+  padding-bottom: 128px;
+  display: flex;
+  justify-content: space-between;
+}
+.cart__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.cart__btn {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 16px 40px;
+  border: 1px solid #A4A4A4;
+  background-color: transparent;
+}
+
+.cart-item {
+  display: flex;
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+  position: relative;
+  margin-bottom: 40px;
+}
+.cart-item__image {
+  width: 262px;
+}
+.cart-item__description {
+  padding: 22px 97px 22px 31px;
+  width: 390px;
+}
+.cart-item__heading {
+  margin-bottom: 42px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.cart-item__parametres {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #575757;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.cart-item__close {
+  position: absolute;
+  top: 28px;
+  right: 22px;
+  background-color: transparent;
+  border: none;
+}
+.cart-item__close:hover path {
+  fill: #F16D7F;
+}
+
+.quantity-input {
+  width: 44px;
+  margin-left: 24px;
+  padding-left: 16px;
+  color: #656565;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid #EAEAEA;
+}
+
+.cart-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-adress-title {
+  color: #222;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: start;
+  padding-top: 17px;
+  padding-bottom: 20px;
+}
+
+.chekout {
+  margin-bottom: 57px;
+}
+
+.user-adress {
+  margin-bottom: 20px;
+  padding: 13px 0 15px 16px;
+  color: #222;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: start;
+  border: 1px solid #A4A4A4;
+  width: 360px;
+}
+
+.user-adress::-moz-placeholder {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: start;
+}
+
+.user-adress:-ms-input-placeholder {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: start;
+}
+
+.user-adress::placeholder {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: start;
+}
+
+.user-adress_light::-moz-placeholder {
+  color: #B1B1B1;
+}
+
+.user-adress_light:-ms-input-placeholder {
+  color: #B1B1B1;
+}
+
+.user-adress_light::placeholder {
+  color: #B1B1B1;
+}
+
+.btn-get-quote {
+  padding: 11px 15px;
+  background-color: transparent;
+  border: 1px solid #A4A4A4;
+  color: #4A4A4A;
+}
+
+.total {
+  background-color: #F5F3F3;
+  padding: 40px;
+  max-width: 360px;
+}
+.total__preview {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+  gap: 15px;
+}
+.total__final {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #E2E2E2;
+  padding-bottom: 21px;
+  gap: 15px;
+}
+.total__link {
+  margin-top: 17px;
+  display: block;
+  padding: 16px 42px;
+  background-color: #F16D7F;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.preview-text {
+  color: #4A4A4A;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.preview-price {
+  color: #4A4A4A;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.final-text {
+  color: #222;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.final-price {
+  color: #F16D7F;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 * {
