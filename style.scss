@@ -3,6 +3,7 @@
 @import "product";
 @import "catalog";
 @import "cart";
+@import "registration";
 
 * {
     margin: 0;
@@ -413,19 +414,20 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 
 }
 
 .subscribe_content_right {
     @include flex_center_column;
-    width: 65%;
+    //width: 65%;
 
 
 }
 
 .subscribe_content_left {
     @include flex_center_column;
-    width: 35%;
+    width: 33%;
 }
 
 .subscribe_text {

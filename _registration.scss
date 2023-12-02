@@ -1,0 +1,132 @@
+.registration {
+    padding: 64px 0 96px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 128px;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    &__text {
+        color: #222;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 20px;
+    }
+
+    &__data {
+        display: block;
+        padding: 13px 0 16px 18px;
+        border-color: #B1B1B1;
+    }
+
+    &__data:nth-child(2n) {
+        margin-bottom: 20px;
+    }
+
+
+
+    &__data::placeholder {
+        text-align: left;
+        color: #B1B1B1;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+    }
+
+    &__radio-btn {
+        color: #000;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        padding-top: 33px;
+        padding-bottom: 33px;
+        display: flex;
+        gap: 20px;
+
+        &_small-gap {
+            display: flex;
+            gap: 10px;
+        }
+    }
+
+    &__btn {
+        width: 168px;
+        padding: 16px 20px 16px 30px;
+        background-color: $pink;
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: 1px solid $pink;
+    }
+
+    &__btn:hover {
+        @include hover_pink;
+    }
+
+    &__svg {
+        margin-left: 20px;
+    }
+
+
+}
+
+.password-hint {
+    color: #B1B1B1;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.perks {
+    &__title {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 22px;
+    }
+
+    &__text {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 22px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__list-item {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__list-item::before {
+        content: url("img/list-pointer.svg");
+        padding-right: 22px;
+    }
+}
