@@ -128,7 +128,7 @@
 
     &__checkbox {
         @include sort_position;
-        width: 79px;
+        width: 70px;
         display: flex;
         flex-direction: column;
         gap: 9px;
@@ -204,4 +204,23 @@
 .swiper-pagination-bullet-active {
     color: #fff;
     background: #007aff;
+}
+
+
+@media(max-width:1024px) {
+    .filter-sort {
+        height: 81px;
+    }
+
+    .filter {
+        margin-top: 10px;
+    }
+
+    .sort {
+        padding-top: 24px;
+    }
+
+    .swiper {
+        margin-bottom: 64px;
+    }
 }
