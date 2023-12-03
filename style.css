@@ -79,6 +79,12 @@
   height: 724px;
 }
 
+.somediv {
+  margin-top: -64px;
+  position: relative;
+  z-index: 2;
+}
+
 .product__descr {
   border: 1px solid #EAEAEA;
   padding-left: 290px;
@@ -156,6 +162,7 @@
   align-items: center;
   gap: 11px;
   display: flex;
+  transition: all 0.3s;
 }
 
 .add__prod__basket:hover {
@@ -167,6 +174,14 @@
   fill: #EAEAEA;
 }
 
+@media (max-width: 1024px) {
+  .somediv {
+    margin-top: 0px;
+  }
+  .product__box:last-child {
+    display: none;
+  }
+}
 .filter-sort {
   height: 132px;
   display: flex;
@@ -804,7 +819,7 @@ img {
   visibility: hidden;
 }
 
-.burger {
+.pointer {
   cursor: pointer;
 }
 
