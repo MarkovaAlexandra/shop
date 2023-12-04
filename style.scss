@@ -13,18 +13,11 @@
     text-decoration: none;
 }
 
-.pages {
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    background-color: transparent;
-    top: 100px;
-    z-index: 20;
-}
+
 
 body {
     font-family: 'Lato', sans-serif;
-    //overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 img {

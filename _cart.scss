@@ -226,3 +226,39 @@
     font-weight: 700;
     line-height: normal;
 }
+
+@media(max-width:1024px) {
+    .cart {
+        padding-top: 59px;
+        padding-bottom: 128px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 62px;
+
+        &__buttons {
+            justify-content: center;
+            gap: 48px;
+            padding-top: 20px;
+        }
+    }
+
+    .cart-form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+
+
+    }
+
+    .total {
+        margin-top: 36px;
+    }
+
+    .chekout {
+        margin-bottom: 0px;
+    }
+
+}
