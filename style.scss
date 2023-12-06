@@ -41,7 +41,8 @@ img {
 
 .header-flex {
     @include flex_center_spbetween;
-    overflow: hidden;
+    //overflow-x: hidden;
+    position: relative;
 }
 
 .header-left {
@@ -54,6 +55,7 @@ img {
     justify-content: space-between;
     align-items: flex-end;
     gap: 41px;
+
 }
 
 
@@ -72,7 +74,7 @@ img {
 //2. размещаем наше меню за экраном
 .nav {
     position: absolute;
-    top: 75px;
+    top: 78px;
     right: -300px;
     transition: right 0.5s; //скорость выезда справа
     z-index: 11;
@@ -268,6 +270,7 @@ img {
     width: 32%;
     margin-bottom: 30px;
     position: relative;
+    padding-bottom: 22px;
 
     &__subtitle {
         padding-top: 24px;
@@ -279,6 +282,7 @@ img {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        text-align: left;
     }
 
     &__dscr {
@@ -291,6 +295,7 @@ img {
         padding-bottom: 18px;
         padding-left: 16px;
         padding-right: 29px;
+        text-align: left;
     }
 
     &__image {
@@ -317,6 +322,7 @@ img {
     font-weight: 400;
     line-height: normal;
     padding-left: 18px;
+    text-align: left;
 }
 
 
@@ -485,7 +491,7 @@ img {
 }
 
 .input {
-    width: 256px;
+    max-width: 256px;
     height: 49px;
     color: $dark_color;
     font-family: Lato;
@@ -526,7 +532,7 @@ img {
     font-weight: 400;
     line-height: normal;
     fill: #E05C6E;
-    padding-top: 1rem
+    padding: 1rem 2rem;
 }
 
 
@@ -642,14 +648,15 @@ img {
 
 @media(max-width:767px) {
     .center {
-        padding-right: calc(50% - 160px);
-        padding-left: calc(50% - 160px);
+        padding-right: calc(50% - 180px);
+        padding-left: calc(50% - 180px);
+        // margin: 0 auto;
     }
 
 
-    .mobile_display_none {
-        display: none;
-    }
+    // .mobile_display_none {
+    //     display: none;
+    // }
 
     .dropdown {
         position: absolute;

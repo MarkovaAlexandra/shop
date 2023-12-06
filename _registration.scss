@@ -156,3 +156,16 @@
         }
     }
 }
+
+@media(max-width:767px) {
+    .registration {
+        flex-direction: column;
+        gap: 40px;
+
+        &__form {
+            display: flex;
+            max-width: 360px;
+            flex-shrink: 1;
+        }
+    }
+}
